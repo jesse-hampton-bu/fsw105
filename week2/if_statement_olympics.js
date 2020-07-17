@@ -57,6 +57,7 @@ if (1 === "1") {
 } else {
     console.log("not equal at all")
 }
+
 /* if ((1 <= 2) && 2 === 4) {
     console.log ("yes")
 } */
