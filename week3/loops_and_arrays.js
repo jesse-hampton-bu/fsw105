@@ -46,15 +46,11 @@ function njord (movieGoers){
     }
 }
 console.log(tyr (movieGoers))
+console.log(freya (movieGoers))
+console.log(njord (movieGoers))
 
 
 
 for (var i = 0; i < 101; i++){
-    // console.log(([i] % 2 !=0) ? [i] + " " + "odd" : [i] + " " + "even");
-} 
-
-if([i] % 2 != 0){
-    console.log([i] + "odd") 
-} else {
-    console.log([i] + "even") 
+    console.log(([i] % 2 !=0) ? [i] + " " + "odd" : [i] + " " + "even");
 } 
