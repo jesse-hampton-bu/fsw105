@@ -32,3 +32,4 @@ function dub (info){
 } 
 
 dub(thor)
+dub(odin)
