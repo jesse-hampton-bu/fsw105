@@ -8,7 +8,7 @@ function change (myName){
 change (myName) */
 
 
-var capitalizedAndLowerCase = "Hello"
+/* var capitalizedAndLowerCase = "Hello"
 ​
 function upper(b){
 var uppeCase = b.toUpperCase()
@@ -16,4 +16,4 @@ var lowerCase = b.toLowerCase()
 ​
 console.log(uppeCase.concat(lowerCase))
 }
-upper(capitalizedAndLowerCase)
+upper(capitalizedAndLowerCase) */
