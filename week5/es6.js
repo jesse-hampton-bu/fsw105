@@ -23,7 +23,7 @@ function runForLoop(pets) {
   return petObjects
 }
 
-runForLoop(["cat", "dog"])
+runForLoop(["cat", "dog"],)
 }
 
 
@@ -32,17 +32,15 @@ runForLoop(["cat", "dog"])
 
 const carrots = ["bright orange", "ripe", "rotten"]
 
-function mapVegetables(arr) {
-    return arr.map(function(carrot) {
-        return {type: "carrot", name: carrot}
-    })
-}
+const mapVegetables = (arr) => arr.map((carrot) => ({type: "carrot", name: carrot}));
+
+console.log("#2 ", mapVegetables(carrots));
 
 
 
 // ES6 # 3  rewrite this .filter() uning an arrow function:
 
-/* const people = [
+ const people = [
     {
         name: "Princess Peach",
         friendly: false
@@ -61,47 +59,44 @@ function mapVegetables(arr) {
     }
 ]
 
-function filterForFriendly(arr) {
-    return arr.filter(function(person){
-        return person.friendly
-    })
-}
- */
+const filterForFriendly = (arr) => arr.filter((person) => person.friendly)
+
+console.log("#3 ", filterForFriendly(people));
 
 
 // ES6 # 4  Rewrite the following funtions to be arrow functions:
 
-/* function doMathSum(a, b) {
-    return a + b
-}
-
-let produceProduct = function(a, b) {
-    return a * b
-}
- */
+const doMathSum = (a, b) =>  a + b
 
 
-
- // ES6 # 5  Write a pushString function that takes firstName, lastName, and age as parameters and returns a string like the following:
-                   //Hi Kat Stark, how does it feel to be 40?
-
-/* firstName should default to "Jane"
-lastName should default to "Doe"
-age should default to 100
- */
+const produceProduct = (a, b) => a * b
 
 
+console.log("#4 ", produceProduct(5, 5))
 
- // ES6 # 6 use template litterals to buil the string from #5
+ // ES6 # 5
+{
+
+ function printString(firstName = "Jane", lastName = "Doe", age = 100) {
+     return `Hi ${firstName} ${lastName}, how does it feel to be ${age}?`
+ }
+
+console.log("#5 ", printString())
+} 
+
+
+ // ES6 # 6 use template litterals to build the string from #5
+
+
+let printString = (firstName = "Jane", lastName = "Doe", age = 100) => `Hi ${firstName} ${lastName}, how does it feel to be ${age}?`
+
+console.log("#6 ", printString("Jesse", "Hampton", 33))
 
 
 
 
-
-
-
- // ES6 # 7  Use the shorthand syntax to make the following filter take up one ling. Copy and paste the array to test it.
-/* const animals = [
+ // ES6 # 7  Use the shorthand syntax to make the following filter take up one line. Copy and paste the array to test it.
+const animals = [
     {
         type: "dog",
         name: "Theodore"
@@ -120,26 +115,13 @@ age should default to 100
     }
 ];
 
-function filterForDogs(arr) {
-    return arr.filter(animal => {
-        if (animal.type === "dog") {
-            return true
-        } else {
-            return false
-        }
-    })
-}
- */
+const filterForDogs = (arr) => arr.filter(animal => (animal.type === "dog") ? true : false)
+console.log(filterForDogs(animals), "#7")
 
 
 
 
- // ES6 # 8 Using template literals, write  a function that takes location and name parameters and outputs a message  forrmatted like this:
-//  Hi Janice!
+ // ES6 # 
 
-//  Welcome to Hawaii!
-
-//  I hope you enjoy your styleMedia. Please ask the president of Hawaii if you need anything.
-
-
-
+let greeting = (location = "Hawaii", name = "Janice") => `Hi ${name}! Welcome to ${location}. I hope you enjoy your stay. Please ask the president of ${location} if you need anything.`
+console.log("#8", greeting())

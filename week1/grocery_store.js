@@ -1,13 +1,23 @@
-var shopper = {
-    firstName: "Jesse",
-    lastName: "James",
-    budget: 50,
-    isCash: true,
-    cart: ["soap", "toothPaste", "milk", "coffee", "toiletPaper", "bread", "juice"]
-    fullName : function(){
+let shopper = {
+    firstName : "Marco",
+    lastName : "Polo",
+    age : 25,
+    isMongol : true,
+    fullName : function() {
         return this.firstName + " " + this.lastName;
-    }
+    },
+    groceryCart: ["dish soap", "toilet paper", "eggs", "milk", "cheese", "bread", "toot-paste"]
 };
-console.log(shopper.fullName)
+
+console.log(shopper)
+
+
+
+
+
+
+
+
+
 
 
