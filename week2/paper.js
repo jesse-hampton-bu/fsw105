@@ -40,7 +40,7 @@ function HowAttractedIsLoisLaneToMe ()
     return Math.floor((Math.random()*10)+1);
 }
 
-console.log( HowAttractedIsLoisLaneToMe ()) ;
+console.log( HowAttractedIsLoisLaneToMe()) ;
 
 var clarkKent =true;
 var superman =false;

@@ -10,6 +10,7 @@ let shopper = {
 };
 
 console.log(shopper)
+console.log(shopper.fullName())
 
 
 
