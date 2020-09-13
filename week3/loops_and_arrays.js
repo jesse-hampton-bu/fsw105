@@ -1,4 +1,4 @@
-var movieGoers = [
+var peopleWhoWantToSeeMadMaxFuryRoad = [
     {
         name: "Mike",
         age: 12,
@@ -22,32 +22,27 @@ var movieGoers = [
     }
 ]
 
-function tyr (movieGoers){
-    for (i = 0; i < movieGoers.length; i++){
-        movieGoers[i].age >= 18 ? console.log("is old enough") : console.log("is not old enough");
+function age (peopleWhoWantToSeeMadMaxFuryRoad){
+    for (i = 0; i < peopleWhoWantToSeeMadMaxFuryRoad.length; i++){
+        peopleWhoWantToSeeMadMaxFuryRoad[i].age >= 18 ? console.log("is old enough") : console.log("is not old enough");
     }
 }
-function freya (movieGoers){
-    for (i = 0; i < movieGoers.length; i++){
-        movieGoers[i].age >= 18 ? console.log(`${movieGoers[i].name} is old enough to see Mad Max`) : console.log(`${movieGoers[i].name} is not old enough to see Mad Max`);
+function ageAndName (peopleWhoWantToSeeMadMaxFuryRoad){
+    for (i = 0; i < peopleWhoWantToSeeMadMaxFuryRoad.length; i++){
+        peopleWhoWantToSeeMadMaxFuryRoad[i].age >= 18 ? console.log(`${peopleWhoWantToSeeMadMaxFuryRoad[i].name} is old enough to see Mad Max Fury Road`) : console.log(`${peopleWhoWantToSeeMadMaxFuryRoad[i].name} is not old enough to see Mad Max Fury Road`);
     }
 }
-function njord (movieGoers){
-    for (i = 0; i < movieGoers.length; i++){
-        if (movieGoers[i].gender === "male" && movieGoers[i].age >= 18){
-            console.log (`${movieGoers[i].name} is old enough to see Mad Max let him in`)
-        } else if (movieGoers[i].gender === "female" && movieGoers[i].age >= 18){
-        console.log (`${movieGoers[i].name} is old enough to see Mad Max let her in`)
-        } else if (movieGoers[i].gender === "male" && movieGoers[i].age < 18){
-        console.log (`${movieGoers[i].name} is not old enough to see Mad Max do not  let him in`)
-        } else {
-            console.log (`${movieGoers[i].name} is not old enough to see Mad Max do not let her in`)
-        }
+function ageAndNameAndGender (peopleWhoWantToSeeMadMaxFuryRoad){
+    for (i = 0; i < peopleWhoWantToSeeMadMaxFuryRoad.length; i++){
+        peopleWhoWantToSeeMadMaxFuryRoad[i].age >= 18 && peopleWhoWantToSeeMadMaxFuryRoad[i].gender === "male" ?
+         console.log(`${peopleWhoWantToSeeMadMaxFuryRoad[i].name} is old enough to see Mad Max Fury Road let him in`) : (peopleWhoWantToSeeMadMaxFuryRoad[i].age >=18 && peopleWhoWantToSeeMadMaxFuryRoad[i].gender === "female") ?
+         console.log(`${peopleWhoWantToSeeMadMaxFuryRoad[i].name} is old enough to see Mad Max Fury Road let her in`) : (peopleWhoWantToSeeMadMaxFuryRoad[i].age < 18 && peopleWhoWantToSeeMadMaxFuryRoad[i].gender === "male") ? 
+         console.log(`${peopleWhoWantToSeeMadMaxFuryRoad[i].name} is not old enough to see Mad Max Fury Road do NOT let him in`) : console.log (`${peopleWhoWantToSeeMadMaxFuryRoad[i].name} is not old enough to see Mad Max Fury Road do NOT let her in`)
     }
 }
-console.log(tyr (movieGoers))
-console.log(freya (movieGoers))
-console.log(njord (movieGoers))
+console.log (age(peopleWhoWantToSeeMadMaxFuryRoad))
+console.log(ageAndName(peopleWhoWantToSeeMadMaxFuryRoad))
+console.log(ageAndNameAndGender(peopleWhoWantToSeeMadMaxFuryRoad))
 
 
 
