@@ -1,35 +1,26 @@
-function increase(num1, num2){
-    return(num1 + num2)
-}
-var outcome = increase(30,30)
-console.log(outcome)
- 
+console.log("#1")
+increase = (num1 = 0, num2 = 0) => (num1 + num2)
 
-function biggest (num1, num2, num3){
-    if (num1 > num2 && num1 > num3){
-        console.log(num1)
-    } else if (num2 > num1 && num2 > num3) {
-        console.log(num2)
-    } else {
-        console.log(num3)
-    } 
-}
+console.log(increase())
 
-biggest(14, 155, 88)
+console.log("#2")
 
+biggest = (num1 = 1, num2 =2, num3 =3) => (num1 > num2 && num1 > num3) ? num1 : (num2 > num1 && num2 > num3) ? num2 : num3
 
-function pairs (num){
-    console.log ((num %2 === 0) ?"even" : "odd");
-}
+console.log(biggest(400, 300, 222))
 
-pairs(101)
+console.log("#3")
 
-var thor = "undiscriminativeness";
-var odin = "philosophicoreligious";
+pairs = (num = 0) => ((num % 2 === 0) ? "even" : "odd");
 
-function dub (info){
-    console.log((info.length <= 20) ? (info) + (info) : (info).slice(0, (info).length / 2 ))
-} 
+console.log(pairs())
 
-dub(thor)
-dub(odin)
+console.log("#4")
+
+let thor = "undiscriminativeness"
+let odin = "philosophicoreligious"
+
+dub = (info) => (info.length <= 20) ? (info) + (info) : (info).slice(0, (info).length / 2)
+
+console.log(dub(thor))
+console.log(dub(odin))
