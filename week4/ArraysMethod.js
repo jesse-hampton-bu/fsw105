@@ -1,48 +1,66 @@
-let fruit = ["banana", "apple", "orange", "watermelon"];
-let vegtable = ["carrot", "tomato", "pepper", "lettuce"];
+let fruit = [" banana ", " apple ", " orange ", " watermelon "];
+let vegetable = [" carrot ", " tomato ", " pepper ", " lettuce "];
 
-console.log("fruit: ", fruit);
-console.log("vegtable: ", vegtable);
+console.log(fruit);
+console.log(vegetable);
 
-vegtable.pop();
+console.log("#1");
+
+vegetable.pop();
+console.log(vegetable);
 
 
-console.log("fruit: ", fruit);
-console.log("vegtable: ", vegtable);
+console.log("#2");
 
 fruit.shift();
+console.log(fruit);
 
-console.log("fruit: ", fruit);
-console.log("vegtable: ", vegtable);
 
-let indexOfOrange = fruit.indexOf("orange")
+console.log("#3");
 
+let indexOfOrange = fruit.indexOf("orange");
 console.log(indexOfOrange)
 
+
+console.log("#4")
+
 fruit.push(indexOfOrange)
+console.log(fruit)
 
-console.log("fruit: ", fruit);
 
-console.log(vegtable.length)
+console.log("#5");
 
-let vegLen = vegtable.length
+let vegLen = vegetable.length;
+console.log(vegLen);
 
-vegtable.push(vegLen)
 
-console.log("vegtable: ", vegtable);
+console.log("#6");
 
-let food = fruit.concat(vegtable)
+vegetable.push(vegLen)
+console.log(vegetable)
+
+
+console.log("#7");
+
+let food = fruit.concat(vegetable);
+console.log(food);
+
+
+console.log("#8");
+
+food.splice(4, 2);
 console.log(food)
 
-food.splice(4, 2)
-console.log(food)
 
-let reversedArr = food.reverse()
-console.log(reversedArr)
 
-let joinedName = reversedArr.join(",")
+console.log("#9");
+
+let reversedArr = food.reverse();
+console.log(reversedArr);
+
+
+
+console.log("#10");
+
+let joinedName = reversedArr.join(",");
 console.log(joinedName)
-
-
-
-
