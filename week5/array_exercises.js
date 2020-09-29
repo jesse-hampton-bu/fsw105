@@ -237,6 +237,10 @@ console.log(lengthToShort(["dog", "wolf", "by", "family", "eaten"]));
 
 console.log("D extra credit")
 
+alphabetical = (arr) => arr.sort();
+
+console.log(alphabetical(["dog", "wolf", "by", "family", "eaten"]));
+
 
 
 
