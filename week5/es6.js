@@ -116,12 +116,12 @@ const animals = [
 ];
 
 const filterForDogs = (arr) => arr.filter(animal => (animal.type === "dog") ? true : false)
-console.log(filterForDogs(animals), "#7")
+console.log("#7", filterForDogs(animals))
 
 
 
 
- // ES6 # 
+ // ES6 # 8
 
 let greeting = (location = "Hawaii", name = "Janice") => `Hi ${name}! Welcome to ${location}. I hope you enjoy your stay. Please ask the president of ${location} if you need anything.`
 console.log("#8", greeting())

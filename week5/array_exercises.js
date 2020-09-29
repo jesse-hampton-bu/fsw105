@@ -1,243 +1,162 @@
-
-
-// Section A # 1
-
-const { keyIn } = require("readline-sync");
-
 {
+console.log(" A 1")
+
+
     let nums = [3, 6, 8, 2];
 
-function fiveAndGreaterOnly(num) {
-  return num >= 5;
-}
+    fiveAndGreaterOnly = (num) => num >= 5;
 
-results = nums.filter(fiveAndGreaterOnly);
+    outcome = nums.filter(fiveAndGreaterOnly)
 
-console.log(results, "A1")
+    console.log(outcome)
 
 
 
+console.log(" A 2")
 
 
-// Section A # 2
+    evensOnly = (num) => num %2 === 0;
 
-function evensOnly(num) {
-    return num %2 === 0;
-}
+    duces = nums.filter(evensOnly)
 
-evens = nums.filter(evensOnly);
-
-console.log(evens, "A2")
+    console.log(duces)
 
 }
 
 
-
-
-
-// Section A Extra Credit
-
-{
-    let people = [
-    {
-        name: "Angelina Jolie",
-        age: 80
-    }, {
-    
-        name: "Eric Jones",
-        age: 2
-    }, {
-    
-        name: "Paris Hilton",
-        age: 5
-    }, {
-
-        name: "Kayne West",
-        age: 16
-    }, {
-    
-        name: "Bob Ziroll",
-        age: 100
-    }
-]
-
-
-
-function ofAge(people){
-    return people.age >= 17
-}
-
-eligibility = people.filter(ofAge);
-
-// console.log(people)
-console.log(eligibility, "A.ec")
-
-}
-
-
-
-
-
-
-// Section B #1
-
-{
-    const arr = [2, 5, 100];
-
-    const result = arr.map(function(num){
-        return  num * 2    
-    })
-    
-
-    console.log(arr, "B1")
-    console.log(result, "B1")
-}
-
-
-
-
-
-
-// Sectio B # 2
-
-{
-    const arr = [2, 5, 100];
-
-    const result = arr.map(function(num){
-        return     num.toString()
-    })
-    
-
-    // console.log(arr)
-    console.log(result, "B2")
-
-}
-
-
-
-
-
-
-// Section B # 3
-
- {
-    
-    const str = ["john", "jacob", "jinGleHeimer", "schmidt"];
-     
-    const toCapital = str => {
-      const words = str;
-      return words.map(word => word[0].toUpperCase() + word.slice(1).toLowerCase())};
-    
-    console.log(toCapital(str), "B3")   
-
-} 
-
-
-
-
-
-
-
-// Section B Extra credit 1
-
-
-{
+console.log("A extra credit")
 
     let people = [
         {
             name: "Angelina Jolie",
             age: 80
-        }, {
-        
+        },{
             name: "Eric Jones",
             age: 2
-        }, {
-        
+        },{
             name: "Paris Hilton",
             age: 5
-        }, {
-    
+        },{
             name: "Kayne West",
             age: 16
-        }, {
-        
+        },{
             name: "Bob Ziroll",
             age: 100
         }
     ]
 
+    ofAge = (people) => people.age >= 17;
 
-    const justNames = people.map(function(people) {
-        return people.name 
-    });
-    console.log(justNames, "B.ec1")
- 
- 
- 
- 
- 
- 
- 
-    // Section B Extra credit # 2    NEED TO  CHANGE TO  .map()  TO MEET ASSIGNMENT REQUIREMENTS !!!!
+    oldEnough = people.filter(ofAge)
 
-   function allowed (arr){ 
-    const justNames = arr.map((arr) => arr.age >= 17 ? (`${arr.name} can go to the Matrix`) : (`${arr.name} is underaged!!`));
-    console.log(justNames)
-    }
-console.log(allowed(people), "B.ec2");
+    console.log(oldEnough)
+
+
+console.log("B 1")
+
+{
+    let arr = [2, 5, 100];
+
+    let double = arr.map(function(num){
+         return num * 2
+})
+
+console.log(arr);
+console.log(double)
+
+
+
+
+console.log("B 2")
+
+let stringItUp = arr.map(function(num) {
+    return num.toString()
+})
+
+console.log(stringItUp)
 
 }
 
 
 
-
-
-
-
-// Section C # 1
+console.log("B 3")
 
 {
 
-const nums = [1, 2, 3]
+let str = ["john", "jacob", "jingleHeimer", "schmidt"];
 
-const sum = nums.reduce((total, num) => (total + num), 0);
-console.log(sum, "C1")
+let toCapital = str => {
+    let words = str;
+    return words.map(word => word[0].toUpperCase() + word.slice(1).toLowerCase())
+};
 
+console.log(toCapital(str))
 
-
-
-
-
-
-
-
-
-// Section C # 2
-
-const change = nums.reduce((total, nums) => total.concat(nums), "");
-
-console.log(change, "C2")
+}
 
 
 
-} 
+console.log("B extra credit 1")
 
-
-
-
-
-
-
-
-
-// Section C # 3 
 {
- totalVotes = (arr) => arr.reduce((total, voter) => voter.voted ? total + 1 :(total), 0);
+
+let people = [
+    {
+        name: "Angelina Jolie",
+        age: 80
+    },{
+        name: "Eric Jones",
+        age: 2
+    },{
+        name: "Paris Hilton",
+        age: 5
+    },{
+        name: "Kayne West",
+        age: 16
+    },{
+        name: "Bob Ziroll",
+        age: 100
+    }
+]
+
+namesOnly = (arr) => {justNames = arr.map((arr) => arr.name);
+    return justNames};
+
+console.log(namesOnly(people))
 
 
 
+console.log("B extra credit 2")
 
-const voters = [
+makeStrings = (arr) => {message = arr.map((arr) => arr.age >= 17 ? (`${arr.name} can go to the Matrix`) : (`${arr.name} is underagged !!`));
+    return message};
+
+console.log(makeStrings(people))
+}
+
+
+
+console.log("C 1")
+
+totals = (arr) => {result = arr.reduce(function(final, num) {final = final + num; return final});
+    return result;
+}
+
+console.log(totals([1, 2, 3]))
+
+
+
+console.log("C 2")
+
+stringConcat =  (arr) => arr.reduce((string, num) => string.concat(num), "");
+
+console.log(stringConcat([1, 2, 3]))
+
+
+
+console.log("C 3")
+
+let voters = [
     {name: "Bob" , age: 30 , voted: true},
     {name: "Jake" , age: 32 , voted: true},
     {name: "Kate" , age: 25 , voted: false},
@@ -249,107 +168,77 @@ const voters = [
     {name: "Becky" , age: 43 , voted: false},
     {name: "Joey" , age: 41 , voted: true},
     {name: "Jeff" , age: 30 , voted: true},
-    {name: "Zack" , age: 19 , voted: false},
-];
- console.log(totalVotes(voters), "C3");
+    {name: "Zack" , age: 19 , voted: false}
+]
 
-}
-
+totalVotes = (arr) => arr.reduce((total, voter) => voter.voted ? total + 1 : (total), 0);
 
 
 
+console.log(totalVotes(voters))
 
 
 
-
-// Section C Extra Credit # 1 
+console.log("C extra credit 1")
 
 {
 
-const wishlist = [ 
-    {title: "Tesla Model S", price: 90000 },
-    {title: "4 carat diamond ring", price: 45000 },
-    {title: "Fancy hacky sack", price: 5 },
-    {title: "Gold fidgit spinner", price: 2000 },
-    {title: "A second Tesla Model S", price: 90000 }
-];
+    let wishlist = [ 
+        {title: "Tesla Model S", price: 90000 },
+        {title: "4 carat diamond ring", price: 45000 },
+        {title: "Fancy hacky sack", price: 5 },
+        {title: "Gold fidgit spinner", price: 2000 },
+        {title: "A second Tesla Model S", price: 90000 }
+    ];
+    
+    shoppingSpree = (arr) => arr.reduce((total, item) => total + item.price, 0);
 
-const totalPrices = wishlist.reduce((total, item) => total + item.price, 0);
+    console.log(shoppingSpree(wishlist));
+    
+    }
 
-console.log(totalPrices, "C.ec1")
-
-}
-
-
-
-
-
-
-
-
-
-// Section C Extra Credit # 2
-
-{
+console.log("C extra credit 2")
 
 const arrays = [
-["1", "2", "3"],
-[true],
-[4, 5, 6]
+    ["1", "2", "3"],
+    [true],
+    [4, 5, 6]
 ];
 
-const arraysFlat = arrays.flat();
+flatten = (arr) => arr.flat();
 
-console.log(arraysFlat, "C.ec2")
-}
-
+console.log(flatten(arrays))
 
 
 
+console.log("D 1")
 
+leastToGreatest = (arr) => arr.sort((a, b) => (a > b ? 1 : -1));
 
-// Section D # 1
-
-{
-const nums = [1, 3, 5, 2, 90, 20];
-const leastToGreatest = nums.sort((a, b) =>(a > b ? 1 : -1));
-console.log(leastToGreatest, "D1")
+console.log(leastToGreatest([1, 3, 5, 2, 90, 20]))
 
 
 
+console.log("D 2")
+
+greatestToLeast = (arr) => arr.sort((a, b) => (a < b ? 1 : -1));
+
+console.log(greatestToLeast([1, 3, 5, 2, 90, 20]))
 
 
 
-// Section D # 2
+console.log("D 3")
+
+lengthToShort = (arr) => arr.sort((a, b) => a.length - b.length);
+
+console.log(lengthToShort(["dog", "wolf", "by", "family", "eaten"]));
 
 
 
-const greatestToLeast = nums.sort((a, b) => (a < b ? 1 : -1));
-console.log(greatestToLeast, "D2")
-
-}
-
-
-
-
-
-// Section D # 3
-
-{
-
-const sos = ["dog", "wolf", "by", "family", "eaten"];
-const shortToLong = sos.sort((a, b) => (a.length - b.length));
-console.log(shortToLong, "D3")
+console.log("D extra credit")
 
 
 
 
 
-// Section D Extra Credit 
-sos.sort();
-console.log(sos, "D.ec")
 
-
-
-
-}
